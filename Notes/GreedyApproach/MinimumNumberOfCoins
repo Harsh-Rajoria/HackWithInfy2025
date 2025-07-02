@@ -1,4 +1,4 @@
-**Explanation**
+Explanation
 
 1. Input Reading
 Reads the amount to be made.
@@ -12,7 +12,7 @@ Updates the count and the remaining amount.
 4. Output
 Prints the minimum number of coins needed to make the amount.
 
-**How it Works**
+How it Works
 
 Sample Input
 text
