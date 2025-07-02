@@ -1,0 +1,24 @@
+1. Input Reading
+Prompts the user to enter the number of items.
+For each item, reads its value and weight.
+Reads the knapsack's capacity.
+2. Sorting
+Sorts the items in descending order of their value-to-weight ratio. This ensures the most "valuable" items per unit weight are considered first.
+3. Greedy Selection
+Iterates through the sorted items:
+If the current item fits entirely, add its full value and reduce the remaining capacity.
+If not, take as much as possible (a fraction) to fill the knapsack, add the proportional value, and stop.
+4. Output
+Prints the maximum value that can be obtained, formatted to two decimal places.
+
+How It Works
+Value/weight ratios:
+Item 1: 60/10 = 6.0
+Item 2: 100/20 = 5.0
+Item 3: 120/30 = 4.0
+Sorted order: Item 1, Item 2, Item 3.
+Greedy selection:
+Take all of Item 1 (weight 10, value 60). Remaining capacity: 40.
+Take all of Item 2 (weight 20, value 100). Remaining capacity: 20.
+Take 20/30 of Item 3 (value = 120 * (20/30) = 80). Capacity is now 0.
+Total value = 60 + 100 + 80 = 240.00
