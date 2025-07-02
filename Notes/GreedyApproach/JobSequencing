@@ -1,0 +1,22 @@
+Greedy Approach
+1. Sort jobs by profit (descending):
+Always try to schedule the most profitable jobs first.
+2. For each job:
+Try to schedule it in the latest available slot before its deadline.
+3. Use an array for slots:
+Each index represents a time slot (1-based for clarity). If a slot is empty, the job can be scheduled there.
+
+
+1. Sort jobs by profit:
+c (profit 40, deadline 1)
+d (profit 30, deadline 1)
+a (profit 20, deadline 4)
+b (profit 10, deadline 1)
+2. Maximum deadline: 4
+So, slots available: 1, 2, 3, 4
+3. Schedule jobs:
+Job c: Try slot 1 → available, schedule c at slot 1, profit = 40
+Job d: Try slot 1 → already taken, can't schedule
+Job a: Try slot 4 → available, schedule a at slot 4, profit = 20 (total = 60)
+Job b: Try slot 1 → already taken, can't schedule
+4. Total profit: 40 (c) + 20 (a) = 60
