@@ -1,0 +1,8 @@
+Explanation
+1. Reading Input: The number of activities n is read first, followed by n pairs of start and end times.
+2. Sorting Activities: The activities are sorted by their end times using a custom comparator.
+3. Greedy Selection:
+   3.1Initialize count to 1 (the first activity is always selected).
+   3.2 Set lastEnd to the end time of the first activity.
+   3.3 For each subsequent activity, if its start time is ≥ lastEnd, increment count and update lastEnd to its end time.
+4. Output: The total count of selected activities is printed.
