@@ -1,0 +1,36 @@
+**Explanation**
+
+1. Input Reading
+Reads the amount to be made.
+Reads the denominations as a space-separated string, splits it, and converts to an integer array.
+2. Sorting
+Sorts the denominations in descending order so that the largest coin is considered first (greedy approach).
+3. Greedy Selection
+For each denomination:
+Uses as many coins of that denomination as possible without exceeding the remaining amount.
+Updates the count and the remaining amount.
+4. Output
+Prints the minimum number of coins needed to make the amount.
+
+**How it Works**
+
+Sample Input
+text
+93
+1 2 5 10 20 50 100
+Execution Steps
+Sort denominations: 100, 50, 20, 10, 5, 2, amount = 93
+Coin	How many?	Remaining Amount	Total Coins
+100	        0	            93	                0
+50	        1	            43	                1
+20	        2	            3	                3
+10	        0	            3	                3
+5	        0	            3	                3
+2	        1	            1	                4
+1	        1	            0	                5
+But, let's check the calculation:
+50 (1 coin): 93-50=43
+20 (2 coins): 43-40=3
+2 (1 coin): 3-2=1
+1 (1 coin): 1-1=0
+So, total coins = 1 (50) + 2 (20) + 1 (2) + 1 (1) = 5
