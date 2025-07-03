@@ -1,0 +1,45 @@
+Example 1
+
+Input: prices = , money = 3
+Step 1: Find the two cheapest prices
+Initialize min1 = ∞, min2 = ∞
+Iterate through prices:
+price = 1:
+1 <= min1 (∞), so: min2 = min1 (∞), min1 = 1
+Now: min1 = 1, min2 = ∞
+price = 2:
+2 <= min1 (1)? No.
+2 < min2 (∞), so: min2 = 2
+Now: min1 = 1, min2 = 2
+price = 2:
+2 <= min1 (1)? No.
+2 < min2 (2)? No.
+min1 = 1, min2 = 2 (unchanged)
+Step 2: Calculate minCost
+minCost = min1 + min2 = 1 + 2 = 3
+Step 3: Compare minCost to money
+minCost (3) <= money (3), so you can buy both.
+Return money - minCost = 3 - 3 = 0
+Output: 0
+
+Example 2
+
+Input: prices = , money = 3
+Step 1: Find the two cheapest prices
+Initialize min1 = ∞, min2 = ∞
+Iterate through prices:
+price = 3:
+3 <= min1 (∞), so: min2 = min1 (∞), min1 = 3
+Now: min1 = 3, min2 = ∞
+price = 2:
+2 <= min1 (3), so: min2 = min1 (3), min1 = 2
+Now: min1 = 2, min2 = 3
+price = 3:
+3 <= min1 (2)? No.
+3 < min2 (3)? No.
+min1 = 2, min2 = 3 (unchanged)
+Step 2: Calculate minCost
+minCost = min1 + min2 = 2 + 3 = 5
+Step 3: Compare minCost to money
+minCost (5) > money (3), so you cannot buy both.
+Return money = 3
