@@ -1,0 +1,22 @@
+1. Input Reading
+Reads the target distance and the starting fuel.
+Reads the number of gas stations.
+Reads each station's distance from the start and the amount of fuel it can provide.
+2. Max-Heap (Priority Queue)
+Used to always refuel from the station with the most fuel among those passed but not yet used.
+3. Main Loop
+While the current fuel is less than the target:
+Add all stations within reach (whose distance is ≤ current fuel) to the heap.
+If the heap is empty, you cannot reach the target; print -1 and exit.
+Otherwise, refuel with the largest available fuel from the heap, incrementing the stop count.
+4. Output
+Prints the minimum number of refueling stops needed to reach the target.
+
+
+Example:
+
+1. Start with 10 fuel, can reach station at 10 (add 60 to heap).
+2. Can't reach 20, so refuel with 60 (now fuel = 70, stops = 1).
+3. Now can reach stations at 20, 30, 60 (add 30, 30, 40 to heap).
+4. To reach 100, need more fuel, so refuel with 40 (now fuel = 110, stops = 2).
+5. Now can reach the target.
