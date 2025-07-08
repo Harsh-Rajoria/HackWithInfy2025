@@ -34,8 +34,8 @@ public class CoinChangeDP {
     }
 
     public static void main(String[] args) {
-        int[] coins = {1, 5, 6, 9};
-        int amount = 11;
+        int[] coins = {1, 2, 4, 5};
+        int amount = 13;
         int result = minCoins(coins, amount);
         System.out.println("Minimum coins needed: " + result);
     }
